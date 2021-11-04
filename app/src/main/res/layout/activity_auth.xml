@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AuthActivity"
+    android:padding="8dp"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEmail"
+        android:hint="Email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        ></EditText>
+    <Space
+        android:id="@+id/spEmail"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"></Space>
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPassword"
+        android:hint="Passsword"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spEmail"
+        ></EditText>
+    <Space
+        android:id="@+id/spPassword"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"></Space>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVerticalHalf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        ></androidx.constraintlayout.widget.Guideline>
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:layout_marginHorizontal="5dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glVerticalHalf"
+        app:layout_constraintTop_toBottomOf="@id/spPassword"
+        ></Button>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ingresar"
+        android:layout_marginHorizontal="5dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@id/glVerticalHalf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spPassword" />
+
+
+    <Space
+        android:id="@+id/spButtonGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRegister" />
+
+    <Button
+        android:id="@+id/btnLogInGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="GOOGLE"
+        android:layout_marginHorizontal="5dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="55dp"
+        android:drawableTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spButtonGoogle" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:translationZ="90dp"
+        android:scaleType="fitStart"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="@+id/btnLogInGoogle"
+        app:layout_constraintTop_toTopOf="@+id/btnLogInGoogle"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLogInGoogle"
+        >
+
+    </ImageView>
+    <Space
+        android:id="@+id/spButtons"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogInGoogle" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swRememberPassword"
+        android:text="Recordar contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spButtons"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
